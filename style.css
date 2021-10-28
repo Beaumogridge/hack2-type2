@@ -7,8 +7,11 @@ body {
 }
 
 h1{
+  color: aliceblue;
   background-color:azure;
   background-image: url("ted.jpg");
- 
+  background-size: 75px;
+  background-height: 200px;
+  background-length: 200px;
   
 }
