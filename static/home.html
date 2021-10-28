@@ -3,7 +3,7 @@
     <head>
 <h1>welcome
 </h1>
-</form>
+<body>
 <div id=directoryDiv></div>
     <table id=directoryTable></table>
     <h3><a href=/static/add.html>add entry:</a></h3>
@@ -30,7 +30,8 @@
                 tr.appendChild(tdv);
                 document.getElementById('directoryTable').appendChild(tr);
               }
-            } else {
+            } 
+            else {
               console.error(xhttp.statusText);
             }
           }
@@ -38,5 +39,6 @@
         xhttp.send();
       }
       loadDirectory();
-    </script>
+</script>
+    </body>
 </html>
