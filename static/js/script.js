@@ -21,7 +21,7 @@ function loadDirectory() {
         var directory = JSON.parse(text);
         console.log(directory);
 
-        document.getElementById("directoryDiv").innerHTML = text;
+        
         
         for (var key in directory) {
 
