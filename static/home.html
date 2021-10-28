@@ -1,44 +1,21 @@
 <!DOCTYPE html>
 <html>
     <head>
-<h1>welcome
-</h1>
-<body>
-<div id=directoryDiv></div>
-    <table id=directoryTable></table>
-    <h3><a href=/static/add.html>add entry:</a></h3>
-<script>
-      function loadDirectory() {
-        var xhttp = new XMLHttpRequest();
-        xhttp.open("GET", '/Directory', true);
-        xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-        xhttp.onreadystatechange = function() {
-          if (xhttp.readyState === 4) {
-            if (xhttp.status === 200) {
-              var text = xhttp.responseText;
-              console.log(text);
-              var directory = JSON.parse(text);
-              console.log(directory);
-              document.getElementById("directoryDiv").innerHTML = text;
-              for (var key in directory) {
-                var tr = document.createElement("tr");
-                var tdk = document.createElement("td");
-                var tdv = document.createElement("td");
-                tdk.appendChild(document.createTextNode(key));
-                tdv.appendChild(document.createTextNode(directory[key]));
-                tr.appendChild(tdk);
-                tr.appendChild(tdv);
-                document.getElementById('directoryTable').appendChild(tr);
-              }
-            } 
-            else {
-              console.error(xhttp.statusText);
-            }
-          }
-        };
-        xhttp.send();
-      }
-      loadDirectory();
-</script>
+      <link rel="stylesheet" href="style.css">
+      <script src="js/script.js"></script>
+      <title>
+        Political quotes!
+      </title>
+    </head>
+    <body>
+      <h1>welcome</h1>
+      <div id=directoryDiv></div>
+      <table id=directoryTable></table>
+      <h3><a href=/static/add.html>add entry:</a></h3>
+
+      <script>
+        loadDirectory();
+      </script>
+
     </body>
 </html>
