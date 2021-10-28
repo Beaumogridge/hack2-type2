@@ -1,7 +1,7 @@
 import flask
 import os
 import json
-from flask import Flask, redirect, request,render_template, jsonify
+from flask import Flask, redirect, request, render_template, jsonify
 
 app = Flask(__name__)
 
@@ -15,11 +15,11 @@ app = flask.Flask(__name__)
 def hello():
     return "Hello world"
 
-if __name__ == "__main__":
-    app.run()
-
 @app.route("/Directory", methods=['GET'])
 def returnDir():
     if request.method == 'GET':
         print("getting directory.")
         return json.dumps(directory);
+
+if __name__ == "__main__":
+    app.run()
